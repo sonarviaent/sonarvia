@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonarvia Entertainment – Live Music for Weddings & Special Moments</title>
+<meta name="description" content="Sonarvia Entertainment: live music untuk wedding, birthday, party, dan acara spesial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0a;--card:#141414;--gold:#c9a45c;--cream:#f4f0e6;--ink:#1a1a1a;--muted:#8d8677;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--black);color:#fff;font-family:var(--sans);font-weight:300;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:26px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500}
+.btn{display:inline-block;background:var(--gold);color:#111;font-size:12px;font-weight:500;letter-spacing:.06em;padding:11px 22px;border:1px solid var(--gold);cursor:pointer;font-family:var(--sans);transition:.25s}
+.btn:hover{background:#dcb870}
+.btn.ghost{background:transparent;color:#fff;border-color:#555}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.95);border-bottom:1px solid rgba(201,164,92,.35);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:20px}
+.brand img{height:38px}.brand small{display:block;font-family:var(--sans);font-size:6px;letter-spacing:.3em;color:var(--gold);margin-top:-4px}
+nav ul{display:flex;gap:38px;list-style:none;font-size:11px;font-weight:400}
+nav a:hover{color:var(--gold)}
+/* hero */
+.hero{padding:96px 0 0}
+.hero .eyebrow{margin-bottom:10px}
+.hero h1{font-size:clamp(38px,5.4vw,60px);line-height:1.1;max-width:720px}
+.hero p.sub{font-family:var(--serif);font-size:19px;margin:8px 0 18px}
+.hero-img{position:relative;height:clamp(300px,42vw,470px);overflow:hidden;border-radius:3px}
+.hero-img>img{width:100%;height:100%;object-fit:cover;object-position:center 72%}
+.video{position:absolute;right:22px;bottom:22px;width:132px;aspect-ratio:9/16;border:1px solid var(--gold);border-radius:6px;overflow:hidden;cursor:pointer;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.6);transition:.3s}
+.video:hover{transform:translateY(-4px)}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.video .play{position:absolute;inset:0;display:grid;place-items:center}
+.video .play span{width:42px;height:42px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#111;font-size:14px;padding-left:3px}
+.video em{position:absolute;left:0;right:0;bottom:0;padding:18px 8px 8px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-style:normal;font-size:9px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+.hero-foot{display:flex;justify-content:space-between;font-family:var(--serif);font-size:17px;padding:18px 0 34px}
+/* about */
+.cream{background:var(--cream);color:var(--ink)}
+.about{padding:62px 0 40px;text-align:center}
+.about h2{font-size:34px;letter-spacing:.04em;text-transform:uppercase}
+.about h2:after{content:"";display:block;width:34px;height:2px;background:var(--gold);margin:8px auto 18px}
+.about p{max-width:420px;margin:0 auto 26px;font-size:10px;line-height:1.9;color:#777}
+.about img{width:calc(100% - 40px);margin:0 auto;height:260px;object-fit:cover;object-position:center 70%;border-radius:10px;border:1px solid #333}
+.about .box{padding-bottom:22px}
+/* packages */
+.packages{padding:80px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px;flex-wrap:wrap}
+.head h2{font-size:clamp(30px,4vw,40px);font-weight:400;line-height:1.2;margin-top:10px}
+.head p{font-size:10px;color:var(--muted);max-width:200px;text-align:right}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid #2b2618;padding:26px 22px 22px;position:relative;display:flex;flex-direction:column}
+.card.pop{border-color:var(--gold)}
+.tag{font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.badge{position:absolute;top:18px;right:18px;background:var(--gold);color:#111;font-size:7px;font-weight:600;letter-spacing:.12em;padding:2px 6px}
+.card h3{font-size:25px;margin:16px 0 14px;padding-bottom:16px;border-bottom:1px solid #2b2b2b}
+.card.pop h3{border-color:var(--gold)}
+.card small{font-size:8px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.card p{font-size:10px;margin:6px 0 34px;min-height:32px}
+.card .btn{align-self:flex-start;padding:8px 16px;font-size:10px}
+/* repertoire */
+.rep{padding:56px 0 70px}
+.rep .head p{color:#777}
+.rep h2{color:var(--ink)}
+.rep .eyebrow{font-size:9px}
+.cols{display:grid;grid-template-columns:1fr 1fr;column-gap:34px}
+.cat{margin-bottom:34px}
+.cat h3{font-size:19px;display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--ink)}
+.cat h3 i{color:var(--gold);font-style:normal;font-size:14px}
+.cat li{list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:9px;padding:8px 0;border-top:1px solid #d9d3c4}
+.cat li span{color:#999}
+/* gallery */
+.gallery{padding:64px 0 70px}
+.gallery h2{font-size:clamp(28px,3.6vw,36px);font-weight:400;margin-top:10px}
+.gallery .head p{color:var(--gold);max-width:none;font-size:9px}
+.grid{display:grid;grid-template-columns:1.7fr 1fr;gap:14px}
+.grid.r2{grid-template-columns:1fr 1.7fr;margin-top:14px}
+.grid img{width:100%;height:210px;object-fit:cover;border-radius:8px;border:1px solid #2b2b2b;transition:.4s}
+.grid img:hover{transform:scale(1.015);border-color:var(--gold)}
+/* videos */
+.videos{padding:64px 0 70px;background:#0d0d0d}
+.videos h2{font-size:clamp(28px,3.6vw,36px);font-weight:400;margin-top:10px}
+.videos .head p{color:var(--gold);max-width:none;font-size:9px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;align-items:start}
+.vcard{cursor:pointer;background:var(--card);border:1px solid #2b2618;border-radius:8px;overflow:hidden;transition:.3s;text-align:left;color:inherit;font:inherit;padding:0}
+.vcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+.vthumb{position:relative;aspect-ratio:16/9;background:#000}
+.vcard.short .vthumb{aspect-ratio:9/16}
+.vthumb img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.vthumb .play{position:absolute;inset:0;display:grid;place-items:center}
+.vthumb .play span{width:44px;height:44px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#111;font-size:15px;padding-left:3px}
+.vcard h4{font-family:var(--serif);font-weight:500;font-size:17px;padding:12px 14px 14px}
+.vbox.wide{max-width:880px;aspect-ratio:16/9}
+/* contact */
+.contact{padding:62px 0 58px}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact h2{font-size:clamp(32px,4.2vw,42px);font-weight:400;line-height:1.15;margin:14px 0 14px;color:var(--ink)}
+.contact p{font-size:10px;color:#777;max-width:230px;margin-bottom:22px}
+.contact .wa{font-size:8px;color:#888;margin-top:10px}
+.info{display:grid;gap:18px;align-content:center}
+.row{display:flex;gap:14px;align-items:flex-start}
+.row b{color:var(--gold);font-weight:400;width:16px;font-size:13px}
+.row small{display:block;font-size:7px;letter-spacing:.18em;color:#999;text-transform:uppercase}
+.row span{font-size:10px;color:var(--ink)}
+.row.soc{gap:46px;padding-left:30px}
+footer{padding:50px 0 28px;background:var(--black)}
+.foot{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:30px;align-items:center}
+.foot .logo{font-family:var(--serif);font-size:24px;letter-spacing:.06em}
+.foot .logo small{display:block;font-family:var(--sans);font-size:6px;letter-spacing:.3em;color:var(--gold)}
+.foot q{font-family:var(--serif);font-size:19px;quotes:none;max-width:310px;display:block;line-height:1.4}
+.foot a.top{justify-self:end;font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.bottom{display:flex;justify-content:space-between;margin-top:56px;font-size:8px;color:#888;flex-wrap:wrap;gap:12px}
+.bottom div{display:flex;gap:22px}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;z-index:100;padding:18px}
+.modal.open{display:flex}
+.box{background:var(--card);border:1px solid var(--gold);width:100%;max-width:480px;max-height:92vh;overflow:auto;padding:30px;position:relative}
+.box h3{font-size:28px;margin-bottom:4px}
+.box>p{font-size:11px;color:var(--muted);margin-bottom:18px}
+.x{position:absolute;top:10px;right:16px;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+label{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:12px 0 5px}
+input,select,textarea{width:100%;background:#0d0d0d;border:1px solid #333;color:#fff;padding:10px 12px;font:inherit;font-size:13px}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .btn{width:100%;margin-top:20px;padding:13px}
+.vbox{max-width:360px;padding:0;background:#000;aspect-ratio:9/16}
+.vbox iframe{width:100%;height:100%;border:0}
+.vbox a{position:absolute;bottom:-26px;left:0;right:0;text-align:center;font-size:10px;color:var(--gold)}
+@media(max-width:860px){nav ul{display:none}.cards,.cols,.contact .wrap,.foot{grid-template-columns:1fr}.grid,.grid.r2{grid-template-columns:1fr}.head p{text-align:left}.wrap{padding:0 20px}.hero-foot{font-size:14px}.video{width:100px;right:12px;bottom:12px}.foot a.top{justify-self:start}.row.soc{padding-left:30px;gap:30px}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap nav">
+  <a href="#home" class="brand"><img src="images/logo.png" alt="Sonarvia"><span>Sonarvia<small>ENTERTAINMENT</small></span></a>
+  <nav><ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#packages">Packages</a></li>
+    <li><a href="#repertoire">Repertoire</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#videos">Videos</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <button class="btn" data-book>Book Now</button>
+</div></header>
+
+<section class="hero" id="home"><div class="wrap">
+  <div class="eyebrow">Sonarvia Entertainment</div>
+  <h1>Where Passion Meets Creativity in the World of Music Entertainment</h1>
+  <p class="sub">Make Every Moment Memorable</p>
+  <div class="hero-img">
+    <img src="images/foto-1.jpg" alt="Tim Sonarvia Entertainment">
+    <div class="video" id="videoThumb" role="button" tabindex="0" aria-label="Putar video performa Sonarvia">
+      <img src="https://img.youtube.com/vi/wICo-_v7fY4/hqdefault.jpg" alt="Cuplikan video Sonarvia">
+      <div class="play"><span>▶</span></div><em>Watch Our Performance</em>
+    </div>
+  </div>
+  <div class="hero-foot"><span>Meet The People Behind The Music</span><span>Scroll To Explore</span></div>
+</div></section>
+
+<section class="cream about" id="about"><div class="wrap">
+  <h2>About Us</h2>
+  <p>Sonarvia Entertainment brings passion, creativity, and elegance together to deliver memorable live music experiences. With a diverse repertoire and a variety of music packages, we strive to create the perfect atmosphere for weddings, celebrations, and every special occasion.</p>
+  <div class="box"><img src="images/foto-3.jpg" alt="Para personel Sonarvia"></div>
+</div></section>
+
+<section class="packages" id="packages"><div class="wrap">
+  <div class="head"><div><div class="eyebrow" style="font-size:9px">Our Packages</div><h2>The right sound for your moment</h2></div><p>Three lineups. One shared passion for making your moment memorable.</p></div>
+  <div class="cards">
+    <div class="card"><span class="tag">Standard</span><h3>Rp 3.800.000,-</h3><small>Tie Lineup</small><p>1 Vocal · 1 Keyboard · 1 Bass · 1 Drum</p><button class="btn ghost" data-book="Standard">Book Now</button></div>
+    <div class="card pop"><span class="tag">Premium</span><span class="badge">MOST POPULAR</span><h3>Rp 4.500.000,-</h3><small>Tie Lineup</small><p>2 Vocal · 1 Keyboard · 1 Bass · 1 Drum · 1 Saxophone</p><button class="btn" data-book="Premium">Book Now</button></div>
+    <div class="card"><span class="tag">Deluxe</span><h3>Rp 5.000.000,-</h3><small>Tie Lineup</small><p>2 Vocal · 1 Keyboard · 1 Bass · 1 Drum · 1 Guitar · 1 Saxophone</p><button class="btn ghost" data-book="Deluxe">Book Now</button></div>
+  </div>
+</div></section>
+
+<section class="cream rep" id="repertoire"><div class="wrap">
+  <div class="head"><div><div class="eyebrow">Repertoire / Our Music Collection</div><h2>A soundtrack to your story.</h2></div><p>Every song tells a story. Explore our music selection for your special moments.</p></div>
+  <div class="cols"><div>
+    <div class="cat"><h3><i>✦</i>Grand Entrance &amp; Special Moment</h3><ul>
+      <li>A Thousand Years<span>Christina Perri</span></li><li>Can’t Help Falling in Love<span>Elvis Presley</span></li><li>Beautiful in White<span></span></li><li>Perfect<span>Ed Sheeran</span></li><li>Until I Found You<span>Stephen Sanchez</span></li></ul></div>
+    <div class="cat"><h3><i>♪</i>Jazz / Lounge</h3><ul>
+      <li>Fly Me to the Moon<span>Frank Sinatra</span></li><li>Menghujam Jantung<span>Tompi</span></li><li>What a Wonderful World<span>Louis Armstrong</span></li><li>L-O-V-E<span>Nat King Cole</span></li><li>Valentine<span>Laufey</span></li><li>The Girl from Ipanema<span></span></li><li>Close to You<span>The Carpenters</span></li></ul></div>
+  </div><div>
+    <div class="cat"><h3><i>◍</i>International</h3><ul>
+      <li>All of Me<span>John Legend</span></li><li>Crazy<span>Andrew Garcia</span></li><li>Just the Way You Are<span>Bruno Mars</span></li><li>How Deep Is Your Love<span>Bee Gees</span></li><li>10,000 Hours<span>Justin Bieber</span></li><li>Can’t Take My Eyes Off You<span>Frankie Valli</span></li></ul></div>
+    <div class="cat"><h3><i>♡</i>Romantic / Wedding</h3><ul>
+      <li>The Prayer<span>Celine Dion</span></li><li>My Heart Will Go On<span>Celine Dion</span></li><li>Time to Say Goodbye<span>Andrea Bocelli</span></li></ul></div>
+  </div></div>
+</div></section>
+
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="head"><div><div class="eyebrow" style="font-size:9px">Gallery</div><h2>Moments, in good company.</h2></div><p>Live Performance · Event Atmosphere</p></div>
+  <div class="grid"><img src="images/foto-4.jpg" style="object-position:center 72%" alt="Sonarvia berenam" loading="lazy"><img src="images/foto-2.jpg" style="object-position:center 55%" alt="Penampilan live Sonarvia" loading="lazy"></div>
+  <div class="grid r2"><img src="images/foto-5.jpg" style="object-position:center 72%" alt="Sonarvia santai" loading="lazy"><img src="images/foto-6.jpg" style="object-position:center 55%" alt="Sonarvia di acara outdoor" loading="lazy"></div>
+</div></section>
+
+<section class="videos" id="videos"><div class="wrap">
+  <div class="head"><div><div class="eyebrow" style="font-size:9px">Videos</div><h2>Watch us perform.</h2></div><p>Klik video untuk memutar</p></div>
+  <div class="vgrid" id="vgrid"></div>
+</div></section>
+
+<section class="cream contact" id="contact"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="font-size:8px">Contact Us</div>
+    <h2>Let’s make your moment memorable.</h2>
+    <p>A wedding, a birthday, a celebration. Tell us about your special moment.</p>
+    <button class="btn" data-book>Book Now ↗</button>
+    <div class="wa">WhatsApp · wa.me/6281212952579</div>
+  </div>
+  <div class="info">
+    <div class="row"><b>⌖</b><div><small>Visit Us</small><span>Kedoya Utara No 24, Kebon Jeruk, Jakarta Barat, Jakarta</span></div></div>
+    <div class="row"><b>✉</b><div><small>Email</small><span><a href="mailto:sonarviaentertainment@gmail.com">sonarviaentertainment@gmail.com</a></span></div></div>
+    <div class="row"><b>✆</b><div><small>Phone / WhatsApp</small><span><a href="https://wa.me/6281212952579" target="_blank" rel="noopener">0812-1295-2579</a></span></div></div>
+    <div class="row soc"><div><small>Instagram</small><span><a href="https://instagram.com/sonarvia.ent" target="_blank" rel="noopener">@sonarvia.ent</a></span></div><div><small>TikTok</small><span><a href="https://tiktok.com/@sonarvia_ent" target="_blank" rel="noopener">@sonarvia_ent</a></span></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot"><div class="logo">SONARVIA<small>ENTERTAINMENT</small></div><q>Live music for weddings, birthday, party, and special moments.</q><a class="top" href="#home">Back to top ↑</a></div>
+  <div class="bottom"><span>© Sonarvia Entertainment</span><div><a href="#home">Home</a><a href="#about">About Us</a><a href="#packages">Packages</a><a href="#repertoire">Repertoire</a><a href="#gallery">Gallery</a><a href="#videos">Videos</a><a href="#contact">Contact</a></div></div>
+</div></footer>
+
+<!-- Modal pemesanan -->
+<div class="modal" id="bookModal"><div class="box">
+  <button class="x" data-close aria-label="Tutup">×</button>
+  <h3>Book Your Moment</h3><p>Isi detail acara, lalu pesan akan terkirim ke WhatsApp Sonarvia.</p>
+  <form id="bookForm">
+    <label>Nama</label><input name="nama" required placeholder="Nama lengkap">
+    <label>Nomor WhatsApp</label><input name="hp" required inputmode="tel" placeholder="08xx xxxx xxxx">
+    <div class="two"><div><label>Paket</label><select name="paket" id="paket"><option>Standard – Rp 3.800.000</option><option>Premium – Rp 4.500.000</option><option>Deluxe – Rp 5.000.000</option></select></div>
+    <div><label>Tanggal Acara</label><input type="date" name="tanggal" required></div></div>
+    <div class="two"><div><label>Jenis Acara</label><select name="acara"><option>Wedding</option><option>Birthday</option><option>Party</option><option>Corporate</option><option>Lainnya</option></select></div>
+    <div><label>Jam Mulai</label><input type="time" name="jam"></div></div>
+    <label>Lokasi Acara</label><input name="lokasi" required placeholder="Nama venue / kota">
+    <label>Request Lagu / Catatan</label><textarea name="catatan" rows="3" placeholder="Opsional"></textarea>
+    <button class="btn" type="submit">Kirim via WhatsApp</button>
+  </form>
+</div></div>
+
+<!-- Modal video -->
+<div class="modal" id="videoModal"><div class="box vbox">
+  <button class="x" data-close aria-label="Tutup">×</button>
+  <iframe id="yt" title="Video Sonarvia" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  <a id="ytLink" href="https://youtube.com/shorts/wICo-_v7fY4" target="_blank" rel="noopener">Buka di YouTube ↗</a>
+</div></div>
+
+<script>
+const WA="6281212952579",YT="wICo-_v7fY4";
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const bookM=$("#bookModal"),vidM=$("#videoModal"),yt=$("#yt");
+function closeAll(){bookM.classList.remove("open");vidM.classList.remove("open");yt.src=""}
+$$("[data-book]").forEach(b=>b.addEventListener("click",()=>{
+  const p=b.dataset.book;
+  if(p)[...$("#paket").options].forEach((o,i)=>{if(o.text.startsWith(p))$("#paket").selectedIndex=i});
+  bookM.classList.add("open")}));
+$$("[data-close]").forEach(b=>b.addEventListener("click",closeAll));
+[bookM,vidM].forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeAll()}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+const vt=$("#videoThumb");
+function openVideo(id,short){
+  yt.src="https://www.youtube.com/embed/"+id+"?autoplay=1&rel=0";
+  $("#ytLink").href=short?"https://youtube.com/shorts/"+id:"https://youtu.be/"+id;
+  vidM.querySelector(".vbox").classList.toggle("wide",!short);
+  vidM.classList.add("open");
+}
+vt.addEventListener("click",()=>openVideo(YT,true));
+vt.addEventListener("keydown",e=>{if(e.key==="Enter")openVideo(YT,true)});
+
+/* ====== DAFTAR VIDEO GALERI ======
+   Tambah video baru: salin satu baris { url:"...", title:"..." } lalu tempel link YouTube-nya.
+   Link biasa, Shorts, atau youtu.be semuanya bisa. */
+const VIDEOS=[
+  {url:"https://youtube.com/shorts/wICo-_v7fY4",title:"Live Performance"},
+  {url:"https://www.youtube.com/shorts/RN6n9DfHKzs",title:"Live Performance"},
+  {url:"https://www.youtube.com/shorts/5WJDQmET6Ow",title:"Live Performance"},
+  // Tambah video lagi: salin satu baris di atas, lalu ganti link dan judulnya.
+];
+VIDEOS.forEach(v=>{
+  const m=v.url.match(/(?:shorts\/|v=|youtu\.be\/|embed\/)([\w-]{11})/);
+  if(!m)return;
+  const id=m[1],short=v.url.includes("/shorts/");
+  const b=document.createElement("button");
+  b.className="vcard"+(short?" short":"");
+  b.innerHTML='<div class="vthumb"><img loading="lazy" src="https://img.youtube.com/vi/'+id+'/hqdefault.jpg" alt=""><div class="play"><span>▶</span></div></div><h4></h4>';
+  b.querySelector("h4").textContent=v.title||"Video";
+  b.addEventListener("click",()=>openVideo(id,short));
+  $("#vgrid").appendChild(b);
+});
+$("#bookForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=Object.fromEntries(new FormData(e.target));
+  const msg=`Halo Sonarvia Entertainment, saya ingin memesan.\n\nNama: ${f.nama}\nNo. WhatsApp: ${f.hp}\nPaket: ${f.paket}\nJenis acara: ${f.acara}\nTanggal: ${f.tanggal}${f.jam?" pukul "+f.jam:""}\nLokasi: ${f.lokasi}\nCatatan: ${f.catatan||"-"}\n\nTerima kasih.`;
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
+});
+</script>
+</body>
+</html>
